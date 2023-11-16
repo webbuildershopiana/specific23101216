@@ -79,7 +79,7 @@
 		<html>
  <head></head>
  <body id="ifdk" class="bg-secondary">
-  <div id="ixi3w">
+  <div id="iee7y">
    <div class="swiper w-100 mySwiper">
     <div class="swiper-wrapper">
      <div class="swiper-slide">
@@ -95,16 +95,24 @@
       <img src="https://images.unsplash.com/photo-1556480435-b7b37fd635d6?w=600&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D" alt="swiper-image" class="swiper-image w-100">
      </div>
     </div>
-    <div class="swiper-button-next" id="iqy62"></div>
+    <div class="swiper-button-next" id="i2yjm"></div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-pagination"></div>
    </div>
   </div>
-  <script>var items = document.querySelectorAll('#ixi3w');
+  <script>var items = document.querySelectorAll('#iee7y');
           for (var i = 0, len = items.length; i < len; i++) {
             (function(){
-console.log('before swiper script change');
-        debugger;
+// Dynamically add Swiper CSS to the head element
+        const swiperCssLink = document.createElement('link');
+        swiperCssLink.rel = 'stylesheet';
+        swiperCssLink.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
+        document.head.appendChild(swiperCssLink);
+        // Dynamically add Swiper JS to the head element
+        const swiperJsScript = document.createElement('script');
+        swiperJsScript.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+        document.head.appendChild(swiperJsScript);
+        console.log('running carousel script function');
         //@ts-ignore
         new Swiper(".mySwiper", {
             spaceBetween: 30,

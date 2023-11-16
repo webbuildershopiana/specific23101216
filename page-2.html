@@ -103,8 +103,16 @@
   <script>var items = document.querySelectorAll('#iagfp');
           for (var i = 0, len = items.length; i < len; i++) {
             (function(){
-console.log('before swiper script change');
-        debugger;
+// Dynamically add Swiper CSS to the head element
+        const swiperCssLink = document.createElement('link');
+        swiperCssLink.rel = 'stylesheet';
+        swiperCssLink.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
+        document.head.appendChild(swiperCssLink);
+        // Dynamically add Swiper JS to the head element
+        const swiperJsScript = document.createElement('script');
+        swiperJsScript.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+        document.head.appendChild(swiperJsScript);
+        console.log('running carousel script function');
         //@ts-ignore
         new Swiper(".mySwiper", {
             spaceBetween: 30,
