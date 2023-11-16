@@ -112,25 +112,28 @@
         const swiperJsScript = document.createElement('script');
         swiperJsScript.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
         document.head.appendChild(swiperJsScript);
-        console.log('running carousel script function');
-        //@ts-ignore
-        new Swiper(".mySwiper", {
-            spaceBetween: 30,
-            loop: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-        console.log('after swiper component');
+        // Wait for the Swiper JS to be loaded before initializing
+        swiperJsScript.onload = function () {
+            // Swiper initialization
+            //@ts-ignore
+            new Swiper(".mySwiper", {
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+            console.log('after swiper component');
+        };
 }.bind(items[i]))();
           }</script>
  </body>
