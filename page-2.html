@@ -149,7 +149,7 @@
           for (var i = 0, len = items.length; i < len; i++) {
             (function(){
 //@ts-ignore
-        const swiper = new Swiper(".mySwiper", {
+        new Swiper(".mySwiper", {
             spaceBetween: 30,
             loop: true,
             autoplay: {
@@ -165,6 +165,7 @@
                 prevEl: ".swiper-button-prev",
             },
         });
+        console.log('swiper component');
 }.bind(items[i]))();
           }</script>
  </body>
