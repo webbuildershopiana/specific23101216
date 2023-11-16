@@ -148,7 +148,8 @@
   <script>var items = document.querySelectorAll('#ii243, #inq4q, #i293h');
           for (var i = 0, len = items.length; i < len; i++) {
             (function(){
-//@ts-ignore
+console.log('before swiper script');
+        //@ts-ignore
         new Swiper(".mySwiper", {
             spaceBetween: 30,
             loop: true,
@@ -165,7 +166,7 @@
                 prevEl: ".swiper-button-prev",
             },
         });
-        console.log('swiper component');
+        console.log('after swiper component');
 }.bind(items[i]))();
           }</script>
  </body>
