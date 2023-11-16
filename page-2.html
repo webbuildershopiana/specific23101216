@@ -79,11 +79,11 @@
 		<html>
  <head></head>
  <body>
-  <div id="i68yf">
+  <div id="id7dr">
    <div class="swiper w-100 mySwiper">
     <div class="swiper-wrapper">
      <div class="swiper-slide">
-      <img src="https://dkcut7rvj02cb.cloudfront.net/files/specific23101216/ASSET/jal-mahal-jaipur-tour.jpg" alt="swiper-image" id="i7ylg" class="swiper-image w-100">
+      <img src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="swiper-image" class="swiper-image w-100">
      </div>
      <div class="swiper-slide">
       <img src="https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="swiper-image" class="swiper-image w-100">
@@ -100,11 +100,33 @@
     <div class="swiper-pagination"></div>
    </div>
   </div>
-  <script>var items = document.querySelectorAll('#i68yf');
+  <div id="igjjf">
+   <div class="swiper w-100 mySwiper">
+    <div class="swiper-wrapper">
+     <div class="swiper-slide">
+      <img src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="swiper-image" class="swiper-image w-100">
+     </div>
+     <div class="swiper-slide">
+      <img src="https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="swiper-image" class="swiper-image w-100">
+     </div>
+     <div class="swiper-slide">
+      <img src="https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="swiper-image" class="swiper-image w-100">
+     </div>
+     <div class="swiper-slide">
+      <img src="https://images.unsplash.com/photo-1556480435-b7b37fd635d6?w=600&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D" alt="swiper-image" class="swiper-image w-100">
+     </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+   </div>
+  </div>
+  <script>var items = document.querySelectorAll('#id7dr, #igjjf');
           for (var i = 0, len = items.length; i < len; i++) {
             (function(){
 // Check if Swiper CSS is already added
-        console.log(!document.querySelector('link[href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"]'));
+        console.log(`is swiper link exist ${!document.querySelector('link[href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"]')}`);
+        console.log(`Is swiper script exist ${!document.querySelector('script[src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"]')}`);
         if (!document.querySelector('link[href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"]')) {
             // Dynamically add Swiper CSS to the head element
             const swiperCssLink = document.createElement('link');
@@ -113,7 +135,6 @@
             document.head.appendChild(swiperCssLink);
         }
         // Check if Swiper JS is already added
-        console.log(!document.querySelector('script[src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"]'));
         if (!document.querySelector('script[src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"]')) {
             // Dynamically add Swiper JS to the head element
             const swiperJsScript = document.createElement('script');
@@ -161,7 +182,6 @@
                     prevEl: ".swiper-button-prev",
                 },
             });
-            console.log('Else carousel codition');
         }
 }.bind(items[i]))();
           }</script>

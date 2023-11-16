@@ -79,7 +79,28 @@
 		<html>
  <head></head>
  <body id="ifdk" class="bg-secondary">
-  <div id="icv3l">
+  <div id="iowy6">
+   <div class="swiper w-100 mySwiper">
+    <div class="swiper-wrapper">
+     <div class="swiper-slide">
+      <img src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="swiper-image" class="swiper-image w-100" id="i49ab">
+     </div>
+     <div class="swiper-slide">
+      <img src="https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="swiper-image" class="swiper-image w-100">
+     </div>
+     <div class="swiper-slide">
+      <img src="https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="swiper-image" class="swiper-image w-100">
+     </div>
+     <div class="swiper-slide">
+      <img src="https://images.unsplash.com/photo-1556480435-b7b37fd635d6?w=600&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D" alt="swiper-image" class="swiper-image w-100">
+     </div>
+    </div>
+    <div class="swiper-button-next" id="iqyxg"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination" id="iur7z"></div>
+   </div>
+  </div>
+  <div id="i7kln">
    <div class="swiper w-100 mySwiper">
     <div class="swiper-wrapper">
      <div class="swiper-slide">
@@ -95,12 +116,12 @@
       <img src="https://images.unsplash.com/photo-1556480435-b7b37fd635d6?w=600&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D" alt="swiper-image" class="swiper-image w-100">
      </div>
     </div>
-    <div class="swiper-button-next"></div>
+    <div class="swiper-button-next" id="i9uib"></div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-pagination"></div>
    </div>
   </div>
-  <div id="i53h5">
+  <div id="ikbrf">
    <div class="swiper w-100 mySwiper">
     <div class="swiper-wrapper">
      <div class="swiper-slide">
@@ -116,16 +137,17 @@
       <img src="https://images.unsplash.com/photo-1556480435-b7b37fd635d6?w=600&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D" alt="swiper-image" class="swiper-image w-100">
      </div>
     </div>
-    <div class="swiper-button-next"></div>
+    <div class="swiper-button-next" id="iwyb8"></div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-pagination"></div>
    </div>
   </div>
-  <script>var items = document.querySelectorAll('#icv3l, #i53h5');
+  <script>var items = document.querySelectorAll('#iowy6, #i7kln, #ikbrf');
           for (var i = 0, len = items.length; i < len; i++) {
             (function(){
 // Check if Swiper CSS is already added
-        console.log(!document.querySelector('link[href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"]'));
+        console.log(`is swiper link exist ${!document.querySelector('link[href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"]')}`);
+        console.log(`Is swiper script exist ${!document.querySelector('script[src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"]')}`);
         if (!document.querySelector('link[href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"]')) {
             // Dynamically add Swiper CSS to the head element
             const swiperCssLink = document.createElement('link');
@@ -134,7 +156,6 @@
             document.head.appendChild(swiperCssLink);
         }
         // Check if Swiper JS is already added
-        console.log(!document.querySelector('script[src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"]'));
         if (!document.querySelector('script[src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"]')) {
             // Dynamically add Swiper JS to the head element
             const swiperJsScript = document.createElement('script');
@@ -182,7 +203,6 @@
                     prevEl: ".swiper-button-prev",
                 },
             });
-            console.log('Else carousel codition');
         }
 }.bind(items[i]))();
           }</script>
