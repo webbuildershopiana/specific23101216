@@ -125,8 +125,6 @@
           for (var i = 0, len = items.length; i < len; i++) {
             (function(){
 // Check if Swiper CSS is already added
-        console.log(`is swiper link exist ${!document.querySelector('link[href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"]')}`);
-        console.log(`Is swiper script exist ${!document.querySelector('script[src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"]')}`);
         if (!document.querySelector('link[href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"]')) {
             // Dynamically add Swiper CSS to the head element
             const swiperCssLink = document.createElement('link');
@@ -160,7 +158,6 @@
                         prevEl: ".swiper-button-prev",
                     },
                 });
-                console.log('True carousel codition');
             };
         }
         else {
