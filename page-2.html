@@ -140,30 +140,22 @@
             document.head.appendChild(swiperJsScript);
             // Wait for the Swiper JS to be loaded before initializing
             swiperJsScript.onload = function () {
-                // Swiper initialization
-                //@ts-ignore
-                new Swiper(".mySwiper", {
-                    spaceBetween: 30,
-                    loop: true,
-                    autoplay: {
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    },
-                    pagination: {
-                        el: ".swiper-pagination",
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
-                    },
-                });
+                initializeSwiper();
             };
         }
         else {
             // Swiper JS is already added, directly initialize Swiper
+            initializeSwiper();
+        }
+        function initializeSwiper() {
+            // Destroy existing Swiper instance if it exists
+            const existingSwiper = document.querySelector(".mySwiper");
+            if (existingSwiper && existingSwiper.swiper) {
+                existingSwiper.swiper.destroy(true, true);
+            }
+            // Initialize Swiper with the updated number of slides
             //@ts-ignore
-            new Swiper(".mySwiper", {
+            const mySwiper = new Swiper(".mySwiper", {
                 spaceBetween: 30,
                 loop: true,
                 autoplay: {
@@ -179,6 +171,8 @@
                     prevEl: ".swiper-button-prev",
                 },
             });
+            // Manually update Swiper after manipulating slides
+            mySwiper.update();
         }
 }.bind(items[i]))();
           }</script>
